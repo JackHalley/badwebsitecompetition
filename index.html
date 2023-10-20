@@ -5,93 +5,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bad Website Competition</title>
-    <!-- Link to external stylesheet -->
+    <!-- Link to Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <!-- Link to your custom styles -->
     <link rel="stylesheet" href="style.css">
 </head>
 
-
 <body>
 
-    <!-- Banner Section -->
-    <section id="banner">
-        <img src="path_to_your_image.jpg" alt="Funny broken website graphic">
-        <h1>Welcome to the Bad Website Competition!</h1>
-        <p>Celebrating the quirkiest, most unusual, and downright 'bad' websites on the internet!</p>
-    </section>
+    <!-- Bulma Container -->
+    <div class="container">
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About the Competition</h2>
-        <p>Have you ever come across a website so confusing, so weirdly designed, or just plain 'bad' that it's actually good? This is the place to showcase those unique gems! Whether it's a blast from the past, an odd design choice, or a navigation nightmare, we want to see it. Join the fun, submit an entry, or just enjoy the gallery of web design wonders.</p>
-    </section>
+        <!-- Banner Section -->
+        <section class="hero is-primary is-bold">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title has-text-centered">Welcome to the Bad Website Competition!</h1>
+                    <p class="subtitle has-text-centered">Celebrating the quirkiest, most unusual, and downright 'bad' websites on the internet!</p>
+                </div>
+            </div>
+        </section>
 
-    <!-- How It Works Section -->
-    <section id="how-it-works">
-        <h2>How It Works</h2>
-        <ol>
-            <li>Find & Submit: Stumble upon a weird website? Submit the link!</li>
-            <li>Vote: Every month, vote for your favorite 'bad' website.</li>
-            <li>Win: The top-voted site wins the title of "Worst Website of the Month" and a fun, quirky prize!</li>
-        </ol>
-    </section>
+        <!-- About Section -->
+        <section class="section">
+            <h2 class="title">About the Competition</h2>
+            <p>Have you ever come across a website so confusing, so weirdly designed, or just plain 'bad' that it's actually good? This is the place to showcase those unique gems! Whether it's a blast from the past, an odd design choice, or a navigation nightmare, we want to see it. Join the fun, submit an entry, or just enjoy the gallery of web design wonders.</p>
+        </section>
 
-    <!-- Submission Form Section -->
-    <section id="submission-form">
-        <h2>Submit Your Entry</h2>
-        <form action="your_submission_processing_script.php" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
+        <!-- How It Works Section -->
+        <section class="section">
+            <h2 class="title">How It Works</h2>
+            <ol>
+                <li>Find & Submit: Stumble upon a weird website? Submit the link!</li>
+                <li>Vote: Every month, vote for your favorite 'bad' website.</li>
+                <li>Win: The top-voted site wins the title of "Worst Website of the Month" and a fun, quirky prize!</li>
+            </ol>
+        </section>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
+        <!-- Submission Form Section -->
+        <section class="section">
+            <h2 class="title">Submit Your Entry</h2>
+            <form action="your_submission_processing_script.php" method="post">
+                <div class="field">
+                    <label class="label" for="name">Name:</label>
+                    <div class="control">
+                        <input class="input" type="text" id="name" name="name">
+                    </div>
+                </div>
 
-            <label for="website">Website Link:</label>
-            <input type="url" id="website" name="website">
+                <div class="field">
+                    <label class="label" for="email">Email:</label>
+                    <div class="control">
+                        <input class="input" type="email" id="email" name="email">
+                    </div>
+                </div>
 
-            <label for="description">Why is it 'bad'?</label>
-            <textarea id="description" name="description"></textarea>
+                <div class="field">
+                    <label class="label" for="website">Website Link:</label>
+                    <div class="control">
+                        <input class="input" type="url" id="website" name="website">
+                    </div>
+                </div>
 
-            <input type="submit" value="Submit">
-        </form>
-    </section>
+                <div class="field">
+                    <label class="label" for="description">Why is it 'bad'?</label>
+                    <div class="control">
+                        <textarea class="textarea" id="description" name="description"></textarea>
+                    </div>
+                </div>
 
-    <!-- Gallery Section -->
-    <section id="gallery">
-        <h2>Gallery of Past Winners</h2>
-        <!-- Repeat the following block for each winner -->
-        <div class="winner">
-            <img src="path_to_winner_screenshot.jpg" alt="Winner website screenshot">
-            <p>Winner Website Title</p>
-        </div>
-        <!-- End repeat block -->
-    </section>
+                <div class="field">
+                    <div class="control">
+                        <input class="button is-primary" type="submit" value="Submit">
+                    </div>
+                </div>
+            </form>
+        </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials">
-        <h2>What People Are Saying</h2>
-        <blockquote>
-            "This competition is hilarious! I can't believe some of these sites actually exist."
-            <cite>Jane D.</cite>
-        </blockquote>
-        <blockquote>
-            "I won last month, and the prize was both funny and useful. Can't wait to see more entries!"
-            <cite>Sam L.</cite>
-        </blockquote>
-    </section>
+        <!-- Gallery Section -->
+        <section class="section">
+            <h2 class="title">Gallery of Past Winners</h2>
+            <!-- Repeat the following block for each winner -->
+            <div class="columns is-multiline">
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="path_to_winner_screenshot.jpg" alt="Winner website screenshot">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <p class="subtitle">Winner Website Title</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End repeat block -->
+            </div>
+        </section>
 
-    <!-- Footer -->
-    <footer>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Rules</a></li>
-                <li><a href="#">Submission</a></li>
-                <li><a href="#">Gallery</a></li>
-            </ul>
-        </nav>
-        <!-- Include your social media links/icons here -->
-    </footer>
+        <!-- Testimonials Section -->
+        <section class="section">
+            <h2 class="title">What People Are Saying</h2>
+            <div class="columns is-multiline">
+                <div class="column is-half">
+                    <blockquote class="blockquote">
+                        "This competition is hilarious! I can't believe some of these sites actually exist."
+                        <cite class="has-text-grey">Jane D.</cite>
+                    </blockquote>
+                </div>
+                <div class="column is-half">
+                    <blockquote class="blockquote">
+                        "I won last month, and the prize was both funny and useful. Can't wait to see more entries!"
+                        <cite class="has-text-grey">Sam L.</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+    </div>
 
 </body>
 
