@@ -6,7 +6,6 @@ app = Flask(__name__)
 # Configure SQLite database
 DATABASE = "submissions.db"
 
-
 def create_table():
     conn = sqlite3.connect(DATABASE)
     cur = conn.cursor()
