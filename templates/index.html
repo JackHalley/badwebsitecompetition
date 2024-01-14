@@ -1,42 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bad Website Competition</title>
-    <!-- Link to Bulma CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <!-- Link to your custom styles -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-
+</head>
 <body>
-
-    <!-- Bulma Container -->
     <div class="container">
-
         <!-- Banner Section -->
-      <!-- Banner Section -->
-    <section class="hero is-bold">
-        <div class="hero-body">
-            <div class="container">
-                <h1 class="title has-text-centered">Welcome to the Bad Website Competition!</h1>
-                <p class="subtitle has-text-centered">The only rule is that it has to suck.</p>
-            </div>
-        </div>
-    </section>
-
+        <section class="hero">
+            <h1 class="title">Welcome to the Bad Website Competition!</h1>
+            <p class="subtitle">The only rule is that it has to suck.</p>
+        </section>
 
         <!-- About Section -->
-        <section class="section">
-            <h2 class="title">About the Competition</h2>
+        <section>
+            <h2>About the Competition</h2>
             <p>Have you ever come across a website so confusing, so weirdly designed, or just plain 'bad' that it's actually good? This is the place to showcase those unique gems! Whether it's a blast from the past, an odd design choice, or a navigation nightmare, we want to see it. Join the fun, submit an entry, or just enjoy the gallery of web design wonders.</p>
         </section>
 
         <!-- How It Works Section -->
-        <section class="section">
-            <h2 class="title">How It Works</h2>
+        <section>
+            <h2>How It Works</h2>
             <ol>
                 <li>Find & Submit: Stumble upon a weird website? Submit the link!</li>
                 <li>Vote: Every month, vote for your favorite 'bad' website.</li>
@@ -45,47 +32,33 @@
         </section>
 
         <!-- Submission Form Section -->
-        <section class="section">
-            <h2 class="title">Submit Your Entry</h2>
+        <section>
+            <h2>Submit Your Entry</h2>
             <form action="/submit" method="post">
                 <div class="field">
-                    <label class="label" for="name">Name:</label>
-                    <div class="control">
-                        <input class="input" type="text" id="name" name="name" required>
-                    </div>
-                </div>
-
-                <div class="field">
-                    <label class="label" for="email">Email:</label>
-                    <div class="control">
-                        <input class="input" type="email" id="email" name="email" required>
-                    </div>
-                </div>
-
-                <div class="field">
-                    <label class="label" for="website">Website Link:</label>
-                    <div class="control">
-                        <input class="input" type="url" id="website" name="website" required>
-                    </div>
-                </div>
-
-                <div class="field">
-                    <label class="label" for="description">Why is it 'bad'?</label>
-                    <div class="control">
-                        <textarea class="textarea" id="description" name="description" required></textarea>
-                    </div>
-                </div>
-
-                <div class="field">
-                    <div class="control">
-                        <input class="button is-primary" type="submit" value="Submit">
-                    </div>
-                </div>
-            </form>
-        </section>
-
+    <label class="label" for="name">Name:</label>
+    <input class="input" type="text" id="name" name="name" required>
     </div>
+            <div class="field">
+                <label class="label" for="email">Email:</label>
+                <input class="input" type="email" id="email" name="email" required>
+            </div>
 
+            <div class="field">
+                <label class="label" for="website">Website Link:</label>
+                <input class="input" type="url" id="website" name="website" required>
+            </div>
+
+            <div class="field">
+                <label class="label" for="description">Why is it 'bad'?</label>
+                <textarea class="textarea" id="description" name="description" required></textarea>
+            </div>
+
+            <div class="field">
+                <input class="button" type="submit" value="Submit">
+            </div>
+        </form>
+    </section>
+</div>
 </body>
-
 </html>
